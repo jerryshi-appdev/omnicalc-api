@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  match("/flexible/square/:the_number", { :controller => "application", :action => "flex_square", :via => "get" })
+
+  match("/flexible/square_root/:the_number", { :controller => "application", :action => "flex_sqrt", :via => "get" })
+
+  match("/flexible/random/:min/:max", { :controller => "application", :action => "random", :via => "get" })
+
 end
